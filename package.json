@@ -23,7 +23,7 @@
     "build:css": "shx cp ./node_modules/openmv/template/fonts/gamefont.css ./temp/gamefont.css",
     "build:css-min": "node ./scripts/minifyCSS.js ./temp/gamefont.css ./temp/gamefont.conv.css",
     "build:html": "node ./scripts/generateHTML.js ./dist/index.html",
-    "build:plugin-js": "node ./scripts/generatePluginOpts.js ./dist/js/plugins.js",
+    "// build:plugin-js": "node ./scripts/generatePluginOpts.js ./dist/js/plugins.js",
     "build:plugin-basic": "uglifyjs ./node_modules/openmv/plugins/Community_Basic.js -o ./dist/js/plugins/Community_Basic.js --comments all",
     "build:project": "node ./scripts/generateFile.js \"RPGMV 1.6.2\" ./dist/Game.rpgproject",
     "build:end": "rimraf ./temp",
