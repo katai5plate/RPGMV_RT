@@ -1,0 +1,54 @@
+{
+  "name": "rpgmv-rt",
+  "version": "1.0.0",
+  "description": "ツクールMVのスクリプト類を全部 1 個の HTML にしてしまおうプロジェクト",
+  "main": "index.js",
+  "scripts": {
+    "i": "run-s i:*",
+    "i:init": "yarn install",
+    "i:mv": "yarn upgrade openmv",
+    "build": "run-s build:*",
+    "build:init": "rimraf ./dist ./temp && shx mkdir -p ./dist/ && shx mkdir -p ./temp/",
+    "// build:mkdir-dist-audio": "shx mkdir -p ./dist/audio/bgm && shx mkdir -p ./dist/audio/bgs && shx mkdir -p ./dist/audio/me && shx mkdir -p ./dist/audio/se",
+    "// build:mkdir-dist-img": "shx mkdir -p ./dist/img/animations/ && shx mkdir -p ./dist/img/battlebacks1/ && shx mkdir -p ./dist/img/battlebacks2/ && shx mkdir -p ./dist/img/characters/ && shx mkdir -p ./dist/img/enemies/ && shx mkdir -p ./dist/img/faces/ && shx mkdir -p ./dist/img/parallaxes/ && shx mkdir -p ./dist/img/pictures/ && shx mkdir -p ./dist/img/sv_actors/ && shx mkdir -p ./dist/img/sv_enemies/ && shx mkdir -p ./dist/img/system/ && shx mkdir -p ./dist/img/tilesets/ && shx mkdir -p ./dist/img/titles1/ && shx mkdir -p ./dist/img/titles2/",
+    "build:mkdir-dist-js": "shx mkdir -p ./dist/js/plugins/",
+    "// build:mkdir-dist-data": "shx mkdir -p ./dist/data/",
+    "build:mkdir-dist-fonts": "shx mkdir -p ./dist/fonts/ && node ./scripts/generateFile.js \"\" ./dist/fonts/.gitkeep",
+    "// build:mkdir-dist-empty": "shx mkdir -p ./dist/icon/ && shx mkdir -p ./dist/movies/",
+    "build:mvjs": "node ./scripts/convertMV.js",
+    "build:mvjs-min": "uglifyjs ./temp/mv.js -o ./temp/mv.min.js",
+    "build:mvjs-lz": "node ./scripts/lz64.js ./temp/mv.min.js ./temp/mv.lz.js",
+    "build:lz": "shx cp ./node_modules/openmv/js/libs/lz-string.js ./temp/lz.js",
+    "build:lz-min": "uglifyjs ./temp/lz.js -o ./temp/lz.min.js",
+    "build:css": "shx cp ./node_modules/openmv/template/fonts/gamefont.css ./temp/gamefont.css",
+    "build:css-min": "node ./scripts/minifyCSS.js ./temp/gamefont.css ./temp/gamefont.conv.css",
+    "build:html": "node ./scripts/generateHTML.js ./dist/index.html",
+    "build:plugin-js": "node ./scripts/generatePluginOpts.js ./dist/js/plugins.js",
+    "build:plugin-basic": "uglifyjs ./node_modules/openmv/plugins/Community_Basic.js -o ./dist/js/plugins/Community_Basic.js --comments all",
+    "build:project": "node ./scripts/generateFile.js \"RPGMV 1.6.2\" ./dist/Game.rpgproject",
+    "build:end": "rimraf ./temp",
+    "": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katai5plate/RPGMV_RT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katai5plate/RPGMV_RT/issues"
+  },
+  "homepage": "https://github.com/katai5plate/RPGMV_RT#readme",
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "clean-css-cli": "^4.3.0",
+    "concat-with-sourcemaps": "^1.1.0",
+    "lz-string": "^1.4.4",
+    "npm-run-all": "^4.1.5",
+    "openmv": "rpgtkoolmv/corescript",
+    "rimraf": "^3.0.1",
+    "shx": "^0.3.2",
+    "uglify-js": "^3.7.6"
+  }
+}
