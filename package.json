@@ -13,7 +13,7 @@
     "// build:mkdir-dist-img": "shx mkdir -p ./dist/img/animations/ && shx mkdir -p ./dist/img/battlebacks1/ && shx mkdir -p ./dist/img/battlebacks2/ && shx mkdir -p ./dist/img/characters/ && shx mkdir -p ./dist/img/enemies/ && shx mkdir -p ./dist/img/faces/ && shx mkdir -p ./dist/img/parallaxes/ && shx mkdir -p ./dist/img/pictures/ && shx mkdir -p ./dist/img/sv_actors/ && shx mkdir -p ./dist/img/sv_enemies/ && shx mkdir -p ./dist/img/system/ && shx mkdir -p ./dist/img/tilesets/ && shx mkdir -p ./dist/img/titles1/ && shx mkdir -p ./dist/img/titles2/",
     "build:mkdir-dist-js": "shx mkdir -p ./dist/js/plugins/",
     "// build:mkdir-dist-data": "shx mkdir -p ./dist/data/",
-    "build:mkdir-dist-fonts": "shx mkdir -p ./dist/fonts/ && node ./scripts/generateFile.js \"\" ./dist/fonts/.gitkeep",
+    "build:mkdir-dist-fonts": "shx mkdir -p ./dist/fonts/",
     "// build:mkdir-dist-empty": "shx mkdir -p ./dist/icon/ && shx mkdir -p ./dist/movies/",
     "build:mvjs": "node ./scripts/convertMV.js",
     "build:mvjs-min": "uglifyjs ./temp/mv.js -o ./temp/mv.min.js",
