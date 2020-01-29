@@ -46,6 +46,6 @@
 
 ```
 git clone https://github.com/katai5plate/RPGMV_RT
-yarn i
+yarn && yarn i
 yarn build
 ```
