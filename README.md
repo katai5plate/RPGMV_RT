@@ -11,6 +11,8 @@
 |     **サイズ** | 2290 KB | 602 KB |     | **1688 KB** |
 | **ファイル数** |   18    |   4    |     |   **14**    |
 
+`RPGツクール2000` の `RPG_RT.exe` のサイズ `729 KB` よりも軽い！
+
 ## ダウンロード
 
 1. [ここからソースコードをダウンロード](https://github.com/katai5plate/RPGMV_RT/archive/master.zip)
