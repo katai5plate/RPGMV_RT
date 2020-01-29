@@ -2,6 +2,8 @@
 
 ツクール MV のスクリプトを極限までシンプルにしようプロジェクト
 
+![image](https://user-images.githubusercontent.com/22496143/73382764-78496a80-430b-11ea-9b89-2c5f97ba1a17.png)
+
 ## これは何？
 
 ツクール MV に必要な JavaScript ファイルの数を最小限かつ容量が軽くなるように圧縮したものです。
