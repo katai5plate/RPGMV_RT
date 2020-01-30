@@ -30,18 +30,20 @@
 
 - `fonts/gamefont.css`
 - `js/main.js`
-- `js/rpg_core.js`
-- `js/rpg_managers.js`
-- `js/rpg_objects.js`
-- `js/rpg_scenes.js`
-- `js/rpg_sprites.js`
-- `js/rpg_windows.js`
-- `js/libs/fpsmeter.js`
-- `js/libs/iphone-inline-video.browser.js`
-- `js/libs/lz-string.js`
-- `js/libs/pixi.js`
-- `js/libs/pixi-picture.js`
-- `js/libs/pixi-tilemap.js`
+- 全てのコアスクリプト
+  - `js/rpg_core.js`
+  - `js/rpg_managers.js`
+  - `js/rpg_objects.js`
+  - `js/rpg_scenes.js`
+  - `js/rpg_sprites.js`
+  - `js/rpg_windows.js`
+- 全ての libs
+  - `js/libs/fpsmeter.js`
+  - `js/libs/iphone-inline-video.browser.js`
+  - `js/libs/lz-string.js`
+  - `js/libs/pixi.js`
+  - `js/libs/pixi-picture.js`
+  - `js/libs/pixi-tilemap.js`
 
 3. 同梱の `js/plugins/Community_Basic.js` をプロジェクトの同一ファイルに上書きします。
 
